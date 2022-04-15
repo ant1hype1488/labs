@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include "time.h"
+
 typedef int Item;
 
 typedef struct stacknode {
@@ -23,7 +25,7 @@ StackNode *insert_stack_node(StackNode *parent, Item value);
 void node_print(StackNode *node);
 void stack_push(Stack *s, Item value);
 Item stack_pop(Stack *s);
-
+void stack_concat(Stack *s1,Stack *s2);
 bool stack_is_empty(Stack *s);
 
 void stack_destroy(Stack *s);

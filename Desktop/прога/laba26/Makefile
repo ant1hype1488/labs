@@ -1,17 +1,12 @@
-all: app
+CFLAGS  = -Wall -Werror
 
-app: main.o  stack_l.o
-	gcc main.o  stack_l.o -o app
+all: app
+	rm *.o 
+app: main.o stack.o
+	gcc main.o stack.o -o app $(CFLAGS)
 
 main.o: main.c
-	gcc -c main.c
+	gcc -c main.c $(CFLAGS)
 
-
-
-stack_l.o: stack_l.c
-	gcc -c stack_l.c
-
-
-
-clean:
-	rm -rf *.o hello
+stack.o:stack.c
+	gcc -c stack.c $(CFLAGS)

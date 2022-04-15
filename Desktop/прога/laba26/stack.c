@@ -1,8 +1,5 @@
-#include <stdlib.h>
-#include <stdbool.h>
 
 #include "funcs.h"
-#include <stdio.h>
 Stack *stack_create(size_t stack_size)
 {
     Stack *s = (Stack *) malloc(sizeof(Stack));
@@ -43,7 +40,7 @@ void node_add(Stack *s1, StackNode *s2){
 
  
 }
-void stack_join(Stack *a, Stack *b)
+void stack_concat(Stack *a, Stack *b)
 {
     node_add(a,b->head);
     
