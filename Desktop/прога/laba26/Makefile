@@ -1,9 +1,10 @@
 CFLAGS  = -Wall -Werror
-
+files = main.o stack.o
 all: app
 	rm *.o 
-app: main.o stack.o
-	gcc main.o stack.o -o app $(CFLAGS)
+	clear
+app: $(files)
+	gcc $(files) -o app $(CFLAGS)
 
 main.o: main.c
 	gcc -c main.c $(CFLAGS)

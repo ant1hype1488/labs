@@ -1,5 +1,7 @@
 
 #include "funcs.h"
+
+
 Stack *stack_create(size_t stack_size)
 {
     Stack *s = (Stack *) malloc(sizeof(Stack));
@@ -27,6 +29,7 @@ void stack_push(Stack *s, Item value)
 
 void node_add(Stack *s1, StackNode *s2){
 
+
     if (s2->next !=NULL){
         node_add(s1,s2->next);
     }
@@ -40,22 +43,27 @@ void node_add(Stack *s1, StackNode *s2){
 
  
 }
+
 void stack_concat(Stack *a, Stack *b)
 {
     node_add(a,b->head);
     
 }
-void stack_print(Stack *s){
-   node_print(s->head);
-    
-    
-}
+
 void node_print(StackNode *node){
     if (node->next !=NULL){
         node_print(node->next);
     }
     printf("%d ",node->data);
  
+}
+
+
+void stack_print(Stack *s){
+    node_print(s->head);
+    printf("\n");
+    
+    
 }
 
 
@@ -66,7 +74,7 @@ Item stack_pop(Stack *s)
     StackNode *tmp = s->head->next;
     free(s->head);
     s->head = tmp;
-
+    s->size--;
     return data;
 }
 
@@ -79,6 +87,7 @@ void stack_destroy(Stack *s)
 {
     while (!stack_is_empty(s))
         stack_pop(s);
+
 }
 
 
@@ -130,6 +139,7 @@ void stack_hoare_sort(Stack *s){
         s->head = insert_stack_node(s->head, temp[i]);
     }
     free(temp);
+    printf("\n");
     
     
 }

@@ -17,12 +17,10 @@ typedef struct {
     StackNode *head;
     int size;
 } Stack;
-void stack_hoare_sort(Stack *s);
 
+void stack_hoare_sort(Stack *s);
 Stack *stack_create(size_t stack_size);
 void stack_print(Stack *s);
-StackNode *insert_stack_node(StackNode *parent, Item value);
-void node_print(StackNode *node);
 void stack_push(Stack *s, Item value);
 Item stack_pop(Stack *s);
 void stack_concat(Stack *s1,Stack *s2);
