@@ -1,13 +1,12 @@
 #include "funcs.h"
 
 
-list * init(char word[50]) // а- значение первого узла
+list * init(char word[50])
 {
     list *lst;
-    // выделение памяти под корень списка
     lst = ( list*)malloc(sizeof( list));
     strcpy(lst->field,word);
-    lst->next = lst; // это последний узел списка
+    lst->next = lst;
     lst->prev = lst;
     lst->i = 0;
     return(lst);
@@ -39,8 +38,8 @@ void listprint(list *lst)
     list *p;
     p = lst;
     do {
-        printf("%s ", p->field); // вывод значения элемента p
-        p = p->next; // переход к следующему узлу
+        printf("%s ", p->field);
+        p = p->next;
     } while (p != lst);
 }
 void listprintBack(list *lst)
@@ -48,8 +47,8 @@ void listprintBack(list *lst)
     list *p;
     p = lst->prev;
     do {
-        printf("%s ", p->field); // вывод значения элемента p
-        p = p->prev; // переход к следующему узлу
+        printf("%s ", p->field);
+        p = p->prev;
     } while (p != lst->prev);
 }
 
