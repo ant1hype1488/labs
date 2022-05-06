@@ -108,7 +108,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "funcs.h",
+			"path" : "stack.h",
 			"sourceGroupIndex" : 1
 		},
 		{

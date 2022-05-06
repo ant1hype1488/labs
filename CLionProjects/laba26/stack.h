@@ -1,10 +1,9 @@
 //
-// Created by владислав трофимов on 06.05.2022.
+// Created by владислав трофимов on 07.05.2022.
 //
 
-#ifndef LABA26_FUNCS_H
-#define LABA26_FUNCS_H
-
+#ifndef LABA26_STACK_H
+#define LABA26_STACK_H
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -34,5 +33,4 @@ void stack_destroy(Stack *s);
 int getElemByIndex(Stack *s,int i);
 void stackElemsSwap(Stack *s,int i ,int j);
 void stack_quickSort(Stack *s, int low, int high);
-
-#endif //LABA26_FUNCS_H
+#endif //LABA26_STACK_H

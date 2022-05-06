@@ -1,9 +1,6 @@
 
-#include "funcs.h"
-#include <stdlib.h>
-#include <stdbool.h>
-#include <stdio.h>
-#include "time.h"
+
+#include "stack.h"
 
 Stack *stack_create(size_t stack_size)
 {
@@ -50,7 +47,6 @@ void node_add(Stack *s1, StackNode *s2){
 void stack_concat(Stack *a, Stack *b)
 {
     node_add(a,b->head);
-
 }
 
 void node_print(StackNode *node){
@@ -92,8 +88,6 @@ void stack_destroy(Stack *s)
         stack_pop(s);
 
 }
-
-
 
 
 

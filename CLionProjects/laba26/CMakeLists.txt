@@ -3,4 +3,4 @@ project(laba26 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(laba26 main.c funcs.h stack.c)
+add_executable(laba26 main.c stack.h stack.c)
